@@ -17,6 +17,8 @@ const scene = new THREE.Scene();
 /**
  * Lights
  */
+
+// Ambient Light is used to simulate light bouncing off objects.
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 

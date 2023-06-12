@@ -47,6 +47,7 @@ gui.add(pointLight, "intensity").min(0).max(5).step(0.001).name("Point Int.");
 // RectAreaLight is a mix of directional and diffused light.
 const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 3, 1, 1);
 rectAreaLight.position.set(-1.5, 0, 1.5);
+rectAreaLight.lookAt(new THREE.Vector3());
 scene.add(rectAreaLight);
 
 gui.add(rectAreaLight, "intensity").min(0).max(10).step(0.001).name("RectArea Int.");

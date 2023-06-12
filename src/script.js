@@ -63,6 +63,10 @@ scene.add(spotLight.target);
 
 gui.add(spotLight, "intensity").min(0).max(2).step(0.0001).name("Spot Int.");
 
+// Helpers
+const hemisphereLightHelper = new THREE.HemisphereLightHelper(hemisphereLight, 0.2);
+scene.add(hemisphereLightHelper);
+
 /**
  * Objects
  */

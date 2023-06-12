@@ -19,23 +19,29 @@ const scene = new THREE.Scene();
  */
 
 // Ambient Light is used to simulate light bouncing off objects.
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.01);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.0);
 scene.add(ambientLight);
 
-gui.add(ambientLight, "intensity").min(0).max(1).step(0.0001);
+gui.add(ambientLight, "intensity").min(0).max(1).step(0.0001).name("Ambient Intensity");
 
 // Directional Light will have a sun-like effect in a parallel direction.
 const directionalLight = new THREE.DirectionalLight(0x00fffc, 0.0);
 directionalLight.position.set(1, 0.25, 0);
 scene.add(directionalLight);
 
-gui.add(directionalLight, "intensity").min(0).max(1).step(0.0001);
+gui.add(directionalLight, "intensity").min(0).max(1).step(0.0001).name("Directional Intensity");
 
 // Hemisphere Light has two colors: one from the sky and one from the ground.
 const hemisphereLight = new THREE.HemisphereLight(0xff0000, 0x0000ff, 0.0);
 scene.add(hemisphereLight);
 
-gui.add(hemisphereLight, "intensity").min(0).max(1).step(0.0001);
+gui.add(hemisphereLight, "intensity").min(0).max(1).step(0.0001).name("Hemisphere Intensity");
+
+// Point Light looks like a candle and has a small point that radiates out.
+const pointLight = new THREE.PointLight(0xff9000, 0.5);
+scene.add(pointLight);
+
+gui.add(pointLight, "intensity").min(0).max(1).step(0.001).name("Point Intensity");
 
 /**
  * Objects

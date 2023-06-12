@@ -38,14 +38,14 @@ scene.add(hemisphereLight);
 gui.add(hemisphereLight, "intensity").min(0).max(1).step(0.0001).name("Hemisphere Int.");
 
 // PointLight looks like a candle and has a small point that radiates out.
-const pointLight = new THREE.PointLight(0xff9000, 0.0, 10, 6);
+const pointLight = new THREE.PointLight(0xff9000, 1.0, 10, 6);
 pointLight.position.set(1, -0.5, 1);
 scene.add(pointLight);
 
 gui.add(pointLight, "intensity").min(0).max(5).step(0.001).name("Point Int.");
 
 // RectAreaLight is a mix of directional and diffused light.
-const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 2, 1, 1);
+const rectAreaLight = new THREE.RectAreaLight(0x4e00ff, 3, 1, 1);
 rectAreaLight.position.set(-1.5, 0, 1.5);
 scene.add(rectAreaLight);
 

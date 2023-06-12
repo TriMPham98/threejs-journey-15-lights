@@ -58,6 +58,9 @@ const spotLight = new THREE.SpotLight(0x78ff00, 0.5, 10, Math.PI * 0.1, 0.25, 1)
 spotLight.position.set(0, 2, 3);
 scene.add(spotLight);
 
+spotLight.target.position.y = -0.75;
+scene.add(spotLight.target);
+
 gui.add(spotLight, "intensity").min(0).max(2).step(0.0001).name("Spot Int.");
 
 /**

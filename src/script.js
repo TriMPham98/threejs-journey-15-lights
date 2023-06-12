@@ -52,6 +52,14 @@ scene.add(rectAreaLight);
 
 gui.add(rectAreaLight, "intensity").min(0).max(10).step(0.001).name("RectArea Int.");
 
+// SpotLight is a cone of light much like a flashlight.
+// Parameters: color, intensity, distance, angle, penumbra, decay
+const spotLight = new THREE.SpotLight(0x78ff00, 0.5, 10, Math.PI * 0.1, 0.25, 1);
+spotLight.position.set(0, 2, 3);
+scene.add(spotLight);
+
+gui.add(spotLight, "intensity").min(0).max(2).step(0.0001).name("Spot Int.");
+
 /**
  * Objects
  */

@@ -26,6 +26,7 @@ gui.add(ambientLight, "intensity").min(0).max(1).step(0.0001);
 
 // Directional Light will have a sun-like effect in a parallel direction.
 const directionalLight = new THREE.DirectionalLight(0x00fffc, 0.3);
+directionalLight.position.set(1, 0.25, 0);
 scene.add(directionalLight);
 
 gui.add(directionalLight, "intensity").min(0).max(1).step(0.0001);

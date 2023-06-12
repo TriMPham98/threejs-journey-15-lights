@@ -38,7 +38,7 @@ scene.add(hemisphereLight);
 gui.add(hemisphereLight, "intensity").min(0).max(1).step(0.0001).name("Hemisphere Intensity");
 
 // Point Light looks like a candle and has a small point that radiates out.
-const pointLight = new THREE.PointLight(0xff9000, 0.5);
+const pointLight = new THREE.PointLight(0xff9000, 0.5, 10, 6);
 pointLight.position.set(1, -0.5, 1);
 scene.add(pointLight);
 
